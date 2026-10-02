@@ -120,9 +120,7 @@
             margin-bottom: 30px;
         }
 
-        /* Картинка */
-
-        .image-box {
+        .video-box {
             padding: 10px;
 
             background: #000;
@@ -135,10 +133,8 @@
                 0 0 60px #00eaff;
         }
 
-        .image-box img {
+        video {
             width: 100%;
-            max-height: 700px;
-            object-fit: contain;
             display: block;
             border-radius: 15px;
         }
@@ -187,11 +183,11 @@
                 transform: scale(1.08);
             }
         }
-                @keyframes shake {
+
+        @keyframes shake {
             0%, 100% {
                 transform: rotate(0deg);
             }
-
             25% {
                 transform: rotate(-2deg);
             }
@@ -268,14 +264,9 @@
             ⚡🗿⚡
         </div>
 
-        <!-- КАРТИНКА -->
-
-        <div class="image-box">
-
-            <img src="./gerakl.jpg" alt="Геракл">
-
-        </div>
-
+      <div class="image-box">
+    <img src="gerakl.jpg" alt="Геракл">
+</div>
         <div class="text">
             🗿 АБСОЛЮТНО ЛЕГЕНДАРНЫЙ МОМЕНТ 🗿
         </div>
@@ -285,7 +276,7 @@
         </div>
 
         <div class="footer">
-            GERАКЛ MODE: ON
+            GЕРАКЛ MODE: ON
         </div>
 
     </div>
@@ -305,11 +296,14 @@
             // Прячем стартовый экран
             document.getElementById("startScreen").style.display = "none";
 
-            // Показываем основной сайт
+            // Показываем сайт
             document.getElementById("mainContent").style.display = "block";
 
             // Запускаем музыку
             document.getElementById("music").play();
+
+            // Запускаем видео
+            document.getElementById("video").play();
         }
 
     </script>
