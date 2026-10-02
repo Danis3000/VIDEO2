@@ -3,38 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Моё видео</title>
+
+    <title>С Днём учителя!</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            padding: 40px 20px;
-            background: #111;
-            color: white;
+            min-height: 100vh;
             font-family: Arial, sans-serif;
+            color: #3b2416;
+
+            background:
+                linear-gradient(
+                    rgba(255, 244, 220, 0.88),
+                    rgba(255, 226, 180, 0.92)
+                ),
+                radial-gradient(circle at top, #fff7e6, #e7a45b);
+
             text-align: center;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .apple {
+            font-size: 65px;
+            animation: float 2.5s ease-in-out infinite;
         }
 
         h1 {
+            font-size: 42px;
+            margin: 10px 0;
+        }
+
+        .subtitle {
+            font-size: 20px;
             margin-bottom: 30px;
+        }
+
+        .decor {
+            font-size: 30px;
+            margin: 15px 0 25px;
+            letter-spacing: 8px;
+        }
+
+        .video-box {
+            background: white;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(80, 45, 15, 0.25);
         }
 
         video {
             width: 100%;
-            max-width: 900px;
-            border-radius: 12px;
+            display: block;
+            border-radius: 14px;
+        }
+
+        .message {
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.75);
+            padding: 20px;
+            border-radius: 18px;
+            font-size: 19px;
+            line-height: 1.5;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 16px;
+            opacity: 0.75;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            .subtitle {
+                font-size: 17px;
+            }
+
+            .apple {
+                font-size: 50px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <h1>Моё видео</h1>
+    <div class="container">
 
-    <video controls>
-        <source src="./video.mp4" type="video/mp4">
-        Ваш браузер не поддерживает видео.
-    </video>
+        <div class="apple">🍎</div>
+
+        <h1>С Днём учителя!</h1>
+
+        <div class="subtitle">
+            Спасибо за знания, терпение и вдохновение!
+        </div>
+
+        <div class="decor">
+            📚 ✏️ 🍂 📝 🍎
+        </div>
+
+        <div class="video-box">
+            <video controls>
+                <source src="./video.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+
+        <div class="message">
+            🌟 Желаем нашим учителям<br>
+            счастья, здоровья, вдохновения<br>
+            и благодарных учеников!
+        </div>
+
+        <div class="footer">
+            Сделано с любовью ❤️
+        </div>
+
+    </div>
 
 </body>
 </html>
