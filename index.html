@@ -1,193 +1,8 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ГЕРАКЛ 💪</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            min-height: 100vh;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            color: white;
-
-            background:
-                radial-gradient(circle at 20% 20%, #ff00cc, transparent 30%),
-                radial-gradient(circle at 80% 30%, #00eaff, transparent 30%),
-                radial-gradient(circle at 50% 90%, #7b00ff, transparent 35%),
-                #09001a;
-
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 950px;
-            margin: auto;
-            padding: 35px 15px;
-        }
-
-        /* Стартовый экран */
-
-        #startScreen {
-            min-height: 90vh;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #startScreen h1 {
-            font-size: 60px;
-            margin: 20px 0;
-
-            color: #fff700;
-
-            text-shadow:
-                4px 4px 0 #ff00a8,
-                8px 8px 0 #00eaff;
-
-            animation: shake 1.5s infinite;
-        }
-
-        .emoji {
-            font-size: 80px;
-            animation: bounce 1s infinite alternate;
-        }
-
-        .startButton {
-            margin-top: 30px;
-
-            padding: 25px 60px;
-
-            font-size: 35px;
-            font-weight: 900;
-
-            color: #09001a;
-            background: #fff700;
-
-            border: 5px solid white;
-            border-radius: 25px;
-
-            cursor: pointer;
-
-            box-shadow:
-                0 0 20px #fff700,
-                0 0 45px #ff00cc,
-                0 0 70px #00eaff;
-
-            animation: pulse 1.2s infinite;
-        }
-
-        .startButton:active {
-            transform: scale(0.9);
-        }
-
-        /* Основной сайт */
-
-        #mainContent {
-            display: none;
-        }
-
-        h2 {
-            margin: 5px 0;
-            font-size: 60px;
-            font-weight: 900;
-            letter-spacing: 5px;
-
-            color: #fff700;
-
-            text-shadow:
-                4px 4px 0 #ff00a8,
-                8px 8px 0 #00eaff;
-        }
-
-        .subtitle {
-            margin: 15px 0 30px;
-            font-size: 23px;
-            font-weight: bold;
-        }
-
-        .decor {
-            font-size: 35px;
-            margin-bottom: 30px;
-        }
-
-        .video-box {
-            padding: 10px;
-
-            background: #000;
-            border: 5px solid #fff700;
-            border-radius: 25px;
-
-            box-shadow:
-                0 0 15px #fff700,
-                0 0 35px #ff00cc,
-                0 0 60px #00eaff;
-        }
-
-        video {
-            width: 100%;
-            display: block;
-            border-radius: 15px;
-        }
-
-        .text {
-            margin-top: 30px;
-            padding: 20px;
-
-            background: rgba(0, 0, 0, 0.65);
-            border: 3px solid #00eaff;
-            border-radius: 20px;
-
-            font-size: 22px;
-            font-weight: bold;
-
-            box-shadow: 0 0 25px #00eaff;
-        }
-
-        .bottom {
-            margin-top: 30px;
-            font-size: 30px;
-        }
-
-        .footer {
-            margin-top: 25px;
-            font-size: 14px;
-            opacity: 0.7;
-        }
-
-        @keyframes bounce {
-            from {
-                transform: translateY(0);
-            }
-
-            to {
-                transform: translateY(-15px);
-            }
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.08);
-            }
-        }
-
-        @keyframes shake {
+@keyframes shake {
             0%, 100% {
                 transform: rotate(0deg);
             }
+
             25% {
                 transform: rotate(-2deg);
             }
@@ -264,12 +79,11 @@
             ⚡🗿⚡
         </div>
 
-        <div class="video-box">
+        <!-- КАРТИНКА -->
 
-            <video id="video" controls>
-                <source src="./video.mp4" type="video/mp4">
-                Ваш браузер не поддерживает видео.
-            </video>
+        <div class="image-box">
+
+            <img src="./gerakl.jpg" alt="Геракл">
 
         </div>
 
@@ -282,7 +96,7 @@
         </div>
 
         <div class="footer">
-            GЕРАКЛ MODE: ON
+            GERАКЛ MODE: ON
         </div>
 
     </div>
@@ -302,14 +116,11 @@
             // Прячем стартовый экран
             document.getElementById("startScreen").style.display = "none";
 
-            // Показываем сайт
+            // Показываем основной сайт
             document.getElementById("mainContent").style.display = "block";
 
             // Запускаем музыку
             document.getElementById("music").play();
-
-            // Запускаем видео
-            document.getElementById("video").play();
         }
 
     </script>
