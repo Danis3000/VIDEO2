@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>С Днём учителя!</title>
+    <title>ГЕРАКЛ 💪</title>
 
     <style>
         * {
@@ -15,94 +15,213 @@
             margin: 0;
             min-height: 100vh;
             font-family: Arial, sans-serif;
-            color: #3b2416;
+            text-align: center;
+            color: white;
 
             background:
-                linear-gradient(
-                    rgba(255, 244, 220, 0.88),
-                    rgba(255, 226, 180, 0.92)
-                ),
-                radial-gradient(circle at top, #fff7e6, #e7a45b);
+                radial-gradient(circle at 20% 20%, #ff00cc, transparent 30%),
+                radial-gradient(circle at 80% 30%, #00eaff, transparent 30%),
+                radial-gradient(circle at 50% 90%, #7b00ff, transparent 35%),
+                #09001a;
 
-            text-align: center;
-            padding: 30px 15px;
+            overflow-x: hidden;
         }
 
         .container {
             max-width: 950px;
             margin: auto;
+            padding: 35px 15px;
         }
 
-        .apple {
-            font-size: 65px;
-            animation: float 2.5s ease-in-out infinite;
+        /* Стартовый экран */
+
+        #startScreen {
+            min-height: 90vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
-        h1 {
-            font-size: 42px;
-            margin: 10px 0;
+        #startScreen h1 {
+            font-size: 60px;
+            margin: 20px 0;
+
+            color: #fff700;
+
+            text-shadow:
+                4px 4px 0 #ff00a8,
+                8px 8px 0 #00eaff;
+
+            animation: shake 1.5s infinite;
+        }
+
+        .emoji {
+            font-size: 80px;
+            animation: bounce 1s infinite alternate;
+        }
+
+        .startButton {
+            margin-top: 30px;
+
+            padding: 25px 60px;
+
+            font-size: 35px;
+            font-weight: 900;
+
+            color: #09001a;
+            background: #fff700;
+
+            border: 5px solid white;
+            border-radius: 25px;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 0 20px #fff700,
+                0 0 45px #ff00cc,
+                0 0 70px #00eaff;
+
+            animation: pulse 1.2s infinite;
+        }
+
+        .startButton:active {
+            transform: scale(0.9);
+        }
+
+        /* Основной сайт */
+
+        #mainContent {
+            display: none;
+        }
+
+        h2 {
+            margin: 5px 0;
+            font-size: 60px;
+            font-weight: 900;
+            letter-spacing: 5px;
+
+            color: #fff700;
+
+            text-shadow:
+                4px 4px 0 #ff00a8,
+                8px 8px 0 #00eaff;
         }
 
         .subtitle {
-            font-size: 20px;
-            margin-bottom: 30px;
+            margin: 15px 0 30px;
+            font-size: 23px;
+            font-weight: bold;
         }
 
         .decor {
-            font-size: 30px;
-            margin: 15px 0 25px;
-            letter-spacing: 8px;
+            font-size: 35px;
+            margin-bottom: 30px;
         }
 
         .video-box {
-            background: white;
-            padding: 15px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(80, 45, 15, 0.25);
+            padding: 10px;
+
+            background: #000;
+            border: 5px solid #fff700;
+            border-radius: 25px;
+
+            box-shadow:
+                0 0 15px #fff700,
+                0 0 35px #ff00cc,
+                0 0 60px #00eaff;
         }
 
         video {
             width: 100%;
             display: block;
-            border-radius: 14px;
+            border-radius: 15px;
         }
 
-        .message {
+        .text {
             margin-top: 30px;
-            background: rgba(255, 255, 255, 0.75);
             padding: 20px;
-            border-radius: 18px;
-            font-size: 19px;
-            line-height: 1.5;
+
+            background: rgba(0, 0, 0, 0.65);
+            border: 3px solid #00eaff;
+            border-radius: 20px;
+
+            font-size: 22px;
+            font-weight: bold;
+
+            box-shadow: 0 0 25px #00eaff;
+        }
+
+        .bottom {
+            margin-top: 30px;
+            font-size: 30px;
         }
 
         .footer {
-            margin-top: 30px;
-            font-size: 16px;
-            opacity: 0.75;
+            margin-top: 25px;
+            font-size: 14px;
+            opacity: 0.7;
         }
 
-        @keyframes float {
-            0%, 100% {
+        @keyframes bounce {
+            from {
                 transform: translateY(0);
             }
 
+            to {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+
             50% {
-                transform: translateY(-10px);
+                transform: scale(1.08);
+            }
+        }
+
+        @keyframes shake {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(-2deg);
+            }
+
+            75% {
+                transform: rotate(2deg);
             }
         }
 
         @media (max-width: 600px) {
-            h1 {
-                font-size: 30px;
+
+            #startScreen h1 {
+                font-size: 42px;
+            }
+
+            .emoji {
+                font-size: 60px;
+            }
+
+            .startButton {
+                font-size: 27px;
+                padding: 22px 45px;
+            }
+
+            h2 {
+                font-size: 40px;
             }
 
             .subtitle {
-                font-size: 17px;
+                font-size: 18px;
             }
 
-            .apple {
-                font-size: 50px;
+            .text {
+                font-size: 18px;
             }
         }
     </style>
@@ -110,38 +229,90 @@
 
 <body>
 
-    <div class="container">
+    <!-- Стартовый экран -->
 
-        <div class="apple">🍎</div>
+    <div id="startScreen">
 
-        <h1>С Днём учителя!</h1>
+        <div class="emoji">
+            💪🗿💪
+        </div>
+
+        <h1>ГОТОВ?</h1>
+
+        <button class="startButton" onclick="startGerakl()">
+            ⚡ НАЖМИ ⚡
+        </button>
+
+    </div>
+
+
+    <!-- Основной сайт -->
+
+    <div id="mainContent" class="container">
+
+        <div class="emoji">
+            💪🗿💪
+        </div>
+
+        <h2>ГЕРАКЛ</h2>
 
         <div class="subtitle">
-            Спасибо за знания, терпение и вдохновение!
+            💀 СИЛА. МОЩЬ. ЛЕГЕНДА. 💀
         </div>
 
         <div class="decor">
-            📚 ✏️ 🍂 📝 🍎
+            ⚡🗿⚡
         </div>
 
         <div class="video-box">
-            <video controls>
+
+            <video id="video" controls>
                 <source src="./video.mp4" type="video/mp4">
                 Ваш браузер не поддерживает видео.
             </video>
+
         </div>
 
-        <div class="message">
-            🌟 Желаем нашим учителям<br>
-            счастья, здоровья, вдохновения<br>
-            и благодарных учеников!
+        <div class="text">
+            🗿 АБСОЛЮТНО ЛЕГЕНДАРНЫЙ МОМЕНТ 🗿
+        </div>
+
+        <div class="bottom">
+            💪 🗿 ⚡ 💩 ⚡ 🗿 💪
         </div>
 
         <div class="footer">
-            Сделано с любовью ❤️
+            GЕРАКЛ MODE: ON
         </div>
 
     </div>
+
+
+    <!-- Музыка -->
+
+    <audio id="music" loop>
+        <source src="./gerakl.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <script>
+
+        function startGerakl() {
+
+            // Прячем стартовый экран
+            document.getElementById("startScreen").style.display = "none";
+
+            // Показываем сайт
+            document.getElementById("mainContent").style.display = "block";
+
+            // Запускаем музыку
+            document.getElementById("music").play();
+
+            // Запускаем видео
+            document.getElementById("video").play();
+        }
+
+    </script>
 
 </body>
 </html>
